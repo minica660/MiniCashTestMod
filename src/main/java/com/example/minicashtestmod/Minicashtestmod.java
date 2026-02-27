@@ -28,8 +28,18 @@ public class Minicashtestmod {
     public Minicashtestmod(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
+         modEventBus.addListener(this::commonSetup);
+        
+        MTabs.register(modEventBus);
     
 
+        MinecraftForge.EVENT_BUS.register(this);
+
+        // Register the item to a creative tab
+        modEventBus.addListener(this::addCreative);
+
+        
+        
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
