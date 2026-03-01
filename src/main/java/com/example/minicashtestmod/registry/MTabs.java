@@ -22,10 +22,10 @@ public class MTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Minicashtestmod.MOD_ID);
 
     //タブ追加
-    public static final RegistryObject<CreativeModeTab> MINICASH_TAB =
+        public static final RegistryObject<CreativeModeTab> MINICASH_TAB =
             TABS.register("minicash_tab",() -> CreativeModeTab.builder()
                     .title(Component.translatable("creativetabs.minicash_tab"))
-                    .icon(() -> new ItemStack(Items.COMMAND_BLOCK))
+                    .icon(() -> new ItemStack(Items.TOTEM_OF_UNDYING))
                     .displayItems((pParameters, pOutput) -> {
 
                         HolderLookup.RegistryLookup ent =pParameters.holders().lookupOrThrow(Registries.ENCHANTMENT);
@@ -35,7 +35,18 @@ public class MTabs {
                         netheriteAxe.enchant(ent.getOrThrow(Enchantments.SHARPNESS), 5);
                         netheriteAxe.enchant(ent.getOrThrow(Enchantments.EFFICIENCY), 5);
                         netheriteAxe.enchant(ent.getOrThrow(Enchantments.UNBREAKING), 3);
+                        netheriteAxe.enchant(ent.getOrThrow(Enchantments.MENDING), 1);
 
+                        ItemStack netheriteSword = new ItemStack(Items.NETHERITE_SWORD);
+
+
+                        netheriteSword.enchant(ent.getOrThrow( Enchantments.SHARPNESS), 5);       // ダメージ増加 V
+                        netheriteSword.enchant(ent.getOrThrow(Enchantments.FIRE_ASPECT), 2);    // 火属性 II
+                        netheriteSword.enchant(ent.getOrThrow(Enchantments.LOOTING), 3);        // ドロップ増加 III
+                        netheriteSword.enchant(ent.getOrThrow(Enchantments.SWEEPING_EDGE), 3);  // 範囲ダメージ III
+                        netheriteSword.enchant(ent.getOrThrow(Enchantments.KNOCKBACK), 2);      // ノックバック II
+                        netheriteSword.enchant(ent.getOrThrow(Enchantments.UNBREAKING), 3);     // 耐久力 III
+                        netheriteSword.enchant(ent.getOrThrow(Enchantments.MENDING), 1);        //修繕
 
                       pOutput.accept(netheriteAxe);
                     })
