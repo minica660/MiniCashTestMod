@@ -40,15 +40,58 @@ public class MTabs {
                         ItemStack netheriteSword = new ItemStack(Items.NETHERITE_SWORD);
 
 
-                        netheriteSword.enchant(ent.getOrThrow( Enchantments.SHARPNESS), 5);       // ダメージ増加 V
-                        netheriteSword.enchant(ent.getOrThrow(Enchantments.FIRE_ASPECT), 2);    // 火属性 II
-                        netheriteSword.enchant(ent.getOrThrow(Enchantments.LOOTING), 3);        // ドロップ増加 III
-                        netheriteSword.enchant(ent.getOrThrow(Enchantments.SWEEPING_EDGE), 3);  // 範囲ダメージ III
-                        netheriteSword.enchant(ent.getOrThrow(Enchantments.KNOCKBACK), 2);      // ノックバック II
-                        netheriteSword.enchant(ent.getOrThrow(Enchantments.UNBREAKING), 3);     // 耐久力 III
-                        netheriteSword.enchant(ent.getOrThrow(Enchantments.MENDING), 1);        //修繕
+                        netheriteSword.enchant(ent.getOrThrow( Enchantments.SHARPNESS), 5);     
+                        netheriteSword.enchant(ent.getOrThrow(Enchantments.FIRE_ASPECT), 2);    
+                        netheriteSword.enchant(ent.getOrThrow(Enchantments.LOOTING), 3);        
+                        netheriteSword.enchant(ent.getOrThrow(Enchantments.SWEEPING_EDGE), 3);  
+                        netheriteSword.enchant(ent.getOrThrow(Enchantments.KNOCKBACK), 2);      
+                        netheriteSword.enchant(ent.getOrThrow(Enchantments.UNBREAKING), 3);     
+                        netheriteSword.enchant(ent.getOrThrow(Enchantments.MENDING), 1);        
+
+                        ItemStack netheritePickaxe = new ItemStack(Items.NETHERITE_PICKAXE);
+                        netheritePickaxe.enchant(ent.getOrThrow(Enchantments.EFFICIENCY), 5);
+                        netheritePickaxe.enchant(ent.getOrThrow(Enchantments.UNBREAKING), 3);
+                        netheritePickaxe.enchant(ent.getOrThrow(Enchantments.MENDING), 1);
+                        netheritePickaxe.enchant(ent.getOrThrow(Enchantments.FORTUNE), 3);
+                        netheritePickaxe.enchant(ent.getOrThrow(Enchantments.SILK_TOUCH), 1);
+
+
+                        ItemStack netheriteHelmet = new ItemStack(Items.NETHERITE_HELMET);
+                        netheriteHelmet.enchant(ent.getOrThrow(Enchantments.PROTECTION), 4);
+                        netheriteHelmet.enchant(ent.getOrThrow(Enchantments.UNBREAKING), 3);
+                        netheriteHelmet.enchant(ent.getOrThrow(Enchantments.MENDING), 1);
+                        netheriteHelmet.enchant(ent.getOrThrow(Enchantments.RESPIRATION), 3);
+                        netheriteHelmet.enchant(ent.getOrThrow(Enchantments.AQUA_AFFINITY), 1);
+
+
+                        ItemStack netheriteChestplate = new ItemStack(Items.NETHERITE_CHESTPLATE);
+                        netheriteChestplate.enchant(ent.getOrThrow(Enchantments.PROTECTION), 4);
+                        netheriteChestplate.enchant(ent.getOrThrow(Enchantments.UNBREAKING), 3);
+                        netheriteChestplate.enchant(ent.getOrThrow(Enchantments.MENDING), 1);
+
+
+                        ItemStack netheriteLeggings = new ItemStack(Items.NETHERITE_LEGGINGS);
+                        netheriteLeggings.enchant(ent.getOrThrow(Enchantments.PROTECTION), 4);
+                        netheriteLeggings.enchant(ent.getOrThrow(Enchantments.UNBREAKING), 3);
+                        netheriteLeggings.enchant(ent.getOrThrow(Enchantments.MENDING), 1);
+                        netheriteLeggings.enchant(ent.getOrThrow(Enchantments.SWIFT_SNEAK), 3);
+
+
+                        ItemStack netheriteBoots = new ItemStack(Items.NETHERITE_BOOTS);
+                        netheriteBoots.enchant(ent.getOrThrow(Enchantments.PROTECTION), 4);
+                        netheriteBoots.enchant(ent.getOrThrow(Enchantments.UNBREAKING), 3);
+                        netheriteBoots.enchant(ent.getOrThrow(Enchantments.MENDING), 1);
+                        netheriteBoots.enchant(ent.getOrThrow(Enchantments.FEATHER_FALLING), 4);
+                        netheriteBoots.enchant(ent.getOrThrow(Enchantments.DEPTH_STRIDER), 3);
+                        netheriteBoots.enchant(ent.getOrThrow(Enchantments.SOUL_SPEED), 3);
 
                       pOutput.accept(netheriteAxe);
+                        pOutput.accept(netheriteSword);
+                        pOutput.accept(netheritePickaxe);
+                        pOutput.accept(netheriteHelmet);
+                        pOutput.accept(netheriteChestplate);
+                        pOutput.accept(netheriteLeggings);
+                        pOutput.accept(netheriteBoots);
                     })
                     .build());
 
